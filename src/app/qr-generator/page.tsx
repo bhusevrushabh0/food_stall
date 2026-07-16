@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import PageHeader from "@/components/PageHeader";
 
@@ -10,7 +10,6 @@ export default function QRGeneratorPage() {
   const [size, setSize]       = useState(220);
   const [generated, setGenerated] = useState(false);
   const [QRCode, setQRCode]   = useState<React.ComponentType<QRProps> | null>(null);
-  const canvasRef             = useRef<HTMLCanvasElement>(null);
 
   // Pre-fill with current origin
   useEffect(() => {
